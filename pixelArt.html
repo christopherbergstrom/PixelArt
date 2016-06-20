@@ -10,38 +10,26 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <!-- Latest compiled and minified JavaScript -->
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-	<style>
-		.divs
-		{
-			position: relative;
-			display: inline-block;
-			/*display: flex;*/
-			font-size: 0px;
-			padding: 0;
-			margin: 0;
-			background-color:black;
-			/*float: left;*/
-			/*clear: both;*/
-			width: 50px;
-			height: 50px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="pixelArt.css"/>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <!-- <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div>
-      <div class="divs"></div> -->
+  <!-- <div class="container-fluid"> -->
+    <!-- <div class="row"> -->
+		<div class="item">
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+			<div class="divs"></div>
+		</div>
+      <!-- <div class="col-md-1 divs"></div>
       <div class="col-md-1 divs"></div>
       <div class="col-md-1 divs"></div>
       <div class="col-md-1 divs"></div>
@@ -52,46 +40,9 @@
       <div class="col-md-1 divs"></div>
       <div class="col-md-1 divs"></div>
       <div class="col-md-1 divs"></div>
-      <div class="col-md-1 divs"></div>
-      <div class="col-md-1 divs"></div>
-    </div>
-  </div>
-	<script>
-		var divs=document.getElementsByClassName("divs");
-		for (var i = 0; i < divs.length; i++)
-		{
-			assign(divs[i]);
-			var width = divs[i].offsetWidth;
-			var height = divs[i].offsetHeight;
-			// console.log("width: "+width+" height: "+height);
-		}
-		function assign(div)
-		{
-			div.addEventListener("click", function()
-			{
-				if (div.style.backgroundColor==="white")
-				{
-					div.style.backgroundColor="black";
-				}
-				else
-				{
-					div.style.backgroundColor="white";
-				}
-			});
-		}
-		function change()
-		{
-			if (one.style.backgroundColor==="white")
-			{
-				console.log("if");
-				one.style.backgroundColor="black";
-			}
-			else
-			{
-				console.log("else");
-				one.style.backgroundColor="white";
-			}
-		};
-	</script>
+      <div class="col-md-1 divs"></div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+	<script src="pixelArt.js"></script>
 </body>
 </html>
