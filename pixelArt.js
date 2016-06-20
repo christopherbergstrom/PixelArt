@@ -10,22 +10,26 @@ window.onload=function()
     assign(divs[i]);
     var width = divs[i].offsetWidth;
     var height = divs[i].offsetHeight;
-    // console.log("width: "+width+" height: "+height);
   }
 };
 function makeDivs()
 {
-  for (var i = 0; i < 49; i++)
+  var container = document.createElement("div");
+  container.setAttribute("id", "container");
+  var width = window.innerWidth*.02;
+  var height = Math.floor(window.innerHeight / width);
+  for (var i = 0; i < height; i++)
   {
     var item = document.createElement("div");
     item.setAttribute("class", "row");
-    for (var j = 0; j < 49; j++)
+    for (var j = 0; j < 50; j++)
     {
       var div = document.createElement("div");
       div.setAttribute("class", "divs");
       item.appendChild(div);
     }
-    body.appendChild(item);
+    container.appendChild(item);
+    body.appendChild(container);
   }
 
 }
