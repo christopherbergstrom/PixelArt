@@ -1,15 +1,9 @@
 var body;
 var colors="Black and White";
+var startMessage;
 window.onload=function()
 {
   body = document.querySelector("body");
-  addEventListener("keyup", function(e)
-  {
-    if (e.keyCode === 77)
-    {
-      menu();
-    }
-  });
   reset();
 };
 function menu()
@@ -35,14 +29,13 @@ function menu()
     select.appendChild(option);
     menu.appendChild(select);
     var message = document.createElement("p");
-    message.innerHTML="WARNING! When you change colors you current work will be reset!"
+    message.innerHTML="! <span style=\"color: red;\">WARNING</span> !<br> When you change colors you current work will be reset!"
     menu.appendChild(message);
     var btn = document.createElement("button");
     btn.innerHTML="Change colors";
     btn.addEventListener("click", function()
     {
       colors=select.value;
-      // console.log(colors);
       menu.parentNode.removeChild(menu);
       reset();
     });
@@ -57,13 +50,6 @@ function reset()
     body.removeChild(body.firstChild);
   }
   makeDivs();
-  // divs=document.getElementsByClassName("divs");
-  // for (var i = 0; i < divs.length; i++)
-  // {
-  //   assign(divs[i]);
-  //   var width = divs[i].offsetWidth;
-  //   var height = divs[i].offsetHeight;
-  // }
 }
 function makeDivs()
 {
@@ -120,12 +106,16 @@ function makeDivs()
       assign(divsNeon[i]);
     }
   }
+  var m = document.createElement("div");
+  m.setAttribute("id", "menuDiv");
+  // m.innerHTML="M";
+  body.appendChild(m);
+  m.addEventListener("click", menu);
 }
 function assign(div)
 {
   div.addEventListener("click", function()
   {
-    // make conditionals for colors
     if (colors === "Black and White")
     {
       if (div.style.backgroundColor==="white")

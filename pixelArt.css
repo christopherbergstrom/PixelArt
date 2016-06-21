@@ -1,3 +1,20 @@
+#menuDiv
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: white;
+  color: black;
+  width: 2vw;
+  height: 2vw;
+  z-index: 1000;
+  background: url(m.jpeg) center no-repeat;
+  background-size: contain;
+}
+#menuDiv:hover
+{
+  cursor: pointer;
+}
 #menu
 {
   position: absolute;
@@ -5,6 +22,7 @@
   left: 35%;
   padding: 2%;
   background-color: grey;
+  color: white;
   z-index: 1000;
   width: 30%;
   height: 30%;
