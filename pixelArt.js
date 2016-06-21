@@ -14,7 +14,6 @@ window.onload=function()
 };
 function menu()
 {
-  console.log("menu");
   var menu = document.getElementById("menu");
   if (menu)
   {
@@ -114,6 +113,7 @@ function makeDivs()
   }
   else if (colors === "Neon")
   {
+    container.style.backgroundColor="rgb(255, 255, 102)";
     divsNeon=document.getElementsByClassName("divsNeon");
     for (var i = 0; i < divsNeon.length; i++)
     {
@@ -170,22 +170,29 @@ function assign(div)
     }
     if (colors === "Neon")
     {
-      // #ffff66
-      //
-      // #99ff66
-      //
-      // #00ffff
-      //
-      // #cc66ff
-      //
-      // #ff0066
-      if (div.style.backgroundColor==="white")
+      if (div.style.backgroundColor==(0, 0, 0))
       {
-        div.style.backgroundColor="black";
+        div.style.backgroundColor="rgb(153, 255, 102)";
       }
-      else
+      else if (div.style.backgroundColor=="rgb(255, 255, 102)")
       {
-        div.style.backgroundColor="white";
+        div.style.backgroundColor="rgb(153, 255, 102)";
+      }
+      else if (div.style.backgroundColor=="rgb(153, 255, 102)")
+      {
+        div.style.backgroundColor="rgb(0, 255, 255)";
+      }
+      else if (div.style.backgroundColor=="rgb(0, 255, 255)")
+      {
+        div.style.backgroundColor="rgb(204, 102, 255)";
+      }
+      else if (div.style.backgroundColor=="rgb(204, 102, 255)")
+      {
+        div.style.backgroundColor="rgb(255, 0, 102)";
+      }
+      else if (div.style.backgroundColor=="rgb(255, 0, 102)")
+      {
+        div.style.backgroundColor="rgb(255, 255, 102)";
       }
     }
   });
